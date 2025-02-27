@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat Motivant</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Motivant</h1>
+        <form method="post" action="/chat">
+            <label for="username">Nom :</label>
+            <input type="text" id="username" name="username" required placeholder="Votre nom">
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required placeholder="Écrivez votre message ici..." rows="4"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Affichage de la réponse -->
+        <div th:if="${response}" class="response">
+            <h2>Réponse :</h2>
+            <p th:text="${response}"></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Conversations de l'utilisateur</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div class="user-conversations-container">
+        <h1>Conversations de <span th:text="${username}"></span></h1>
+        <table class="conversation-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Message</th>
+                    <th>Réponse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="conversation : ${conversations}">
+                    <td th:text="${conversation.timestamp}"></td>
+                    <td th:text="${conversation.message}"></td>
+                    <td th:text="${conversation.response}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/admin" class="back-button">Retour à la liste des utilisateurs</a>
+    </div>
+</body>
+</html>

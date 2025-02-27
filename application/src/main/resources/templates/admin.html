@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Liste des utilisateurs</h1>
+        <ul class="user-list">
+            <li th:each="username : ${usernames}">
+                <a th:href="@{/admin/{username}(username=${username})}" th:text="${username}"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

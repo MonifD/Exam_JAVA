@@ -1,0 +1,235 @@
+/* Style général pour le corps de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Style pour le conteneur principal */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Style pour les titres */
+h1 {
+    color: #2575fc;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Style pour les labels */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Style pour les champs de saisie */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* Style pour le bouton */
+button {
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Bouton plein largeur */
+}
+
+button:hover {
+    background-color: #1a5bbf;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Style pour la réponse */
+.response {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f8ff;
+    border-left: 5px solid #2575fc;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+}
+
+/* Animation pour la réponse */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les liens */
+a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1a5bbf;
+    text-decoration: underline;
+}
+
+/* Style pour la page Admin */
+.admin-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Style pour la liste des utilisateurs */
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list li {
+    margin: 15px 0;
+}
+
+.user-list a {
+    display: block;
+    padding: 15px;
+    background-color: #f1f8ff;
+    border-left: 5px solid #2575fc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.user-list a:hover {
+    background-color: #e1f0ff;
+    transform: translateX(10px);
+}
+
+/* Style pour la page User Conversations */
+.user-conversations-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Style pour le tableau des conversations */
+.conversation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.conversation-table th, .conversation-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.conversation-table th {
+    background-color: #f1f8ff;
+    color: #2575fc;
+    font-weight: 600;
+}
+
+.conversation-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Style pour le bouton de retour */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #1a5bbf;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container, .admin-container, .user-conversations-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .user-list a {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .conversation-table th, .conversation-table td {
+        padding: 8px;
+    }
+}
