@@ -10,7 +10,7 @@ public class Quote {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String quote;
 
@@ -21,19 +21,21 @@ public class Quote {
         this.quote = quote;
     }
 
-    public Integer getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getQuote() {
-        return quote;
-    }
+	public String getQuote() {
+		return quote;
+	}
 
-    public void setQuote(String quote) {
-        this.quote = quote;
-    }
+	public void setQuote(String quote) {
+		this.quote = quote;
+	}
+
+    
 }

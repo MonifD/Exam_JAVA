@@ -1,12 +1,13 @@
 package messages.quoteApi.service;
 
-import messages.quoteApi.model.Quote;
-import messages.quoteApi.repository.QuoteRepository;
+import java.util.List;
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Random;
+import messages.quoteApi.model.Quote;
+import messages.quoteApi.repository.QuoteRepository;
 
 @Service
 public class QuoteService {
@@ -14,12 +15,12 @@ public class QuoteService {
     @Autowired
     private QuoteRepository quoteRepository;
 
-    public Quote getRandomQuote() {
+    public String getRandomQuote() {
         List<Quote> quotes = quoteRepository.findAll();
-        if (!quotes.isEmpty()) {
-            int randomIndex = new Random().nextInt(quotes.size());
-            return quotes.get(randomIndex);
+        if (quotes.isEmpty()) {
+            return "No quotes available";
         }
-        return null;
+        Random random = new Random();
+        return quotes.get(random.nextInt(quotes.size())).getQuote();
     }
 }
