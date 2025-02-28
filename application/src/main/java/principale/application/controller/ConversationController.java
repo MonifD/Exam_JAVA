@@ -17,13 +17,13 @@ public class ConversationController {
 
     @GetMapping("/chat")
     public String showChat() {
-        return "chat";
+        return "conversation";
     }
 
     @PostMapping("/chat")
     public String handleMessage(@RequestParam String username, @RequestParam String message, Model model) {
         Conversation conversation = conversationService.saveConversation(username, message);
         model.addAttribute("response", conversation.getResponse());
-        return "chat";
+        return "conversation";
     }
 }
