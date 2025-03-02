@@ -82,7 +82,7 @@ Ce projet est composé de deux applications Spring Boot :
 ## **Routes disponibles**
 
 ### **quoteApi**
-- **GET `/api/getQuote`** :
+- **GET `http://localhost:8080/api/getQuote`** :
   - Retourne une citation inspirante aléatoire.
   - Exemple de réponse :
     ```json
@@ -90,14 +90,14 @@ Ce projet est composé de deux applications Spring Boot :
     ```
 
 ### **application**
-- **GET `/chat`** :
+- **GET `http://localhost:8081/chat`** :
   - Affiche la page de conversation.
   - Les utilisateurs peuvent entrer leur nom et leur message.
-- **POST `/chat`** :
+- **POST `http://localhost:8081/chat`** :
   - Envoie le message de l'utilisateur et retourne une réponse inspirante.
-- **GET `/admin`** :
+- **GET `http://localhost:8081/admin`** :
   - Affiche la liste des utilisateurs ayant posté des messages.
-- **GET `/admin/{username}`** :
+- **GET `http://localhost:8081/admin/{username}`** :
   - Affiche toutes les conversations d'un utilisateur spécifique.
 
 ---
