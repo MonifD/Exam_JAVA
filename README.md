@@ -42,7 +42,7 @@ Ce projet est composé de deux applications Spring Boot :
 ### **1. Lancer quoteApi**
 
 1. **Importer le projet dans Eclipse** :
-   - File > Import > Maven > Existing Maven Projects.
+   - File > Open Projet from File System.
    - Sélectionnez le dossier `quoteApi`.
    
 2. **Modifier les informations de connexion** :
@@ -61,7 +61,7 @@ Ce projet est composé de deux applications Spring Boot :
 ### **2. Lancer application**
 
 1. **Importer le projet dans Eclipse** :
-   - File > Import > Maven > Existing Maven Projects.
+   - File > Open Projet from File System.
    - Sélectionnez le dossier `application`.
    
 2. **Modifier les informations de connexion** :
