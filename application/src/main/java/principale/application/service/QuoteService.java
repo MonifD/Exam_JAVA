@@ -10,7 +10,7 @@ public class QuoteService {
     private RestTemplate restTemplate;
 
     public String getRandomQuote() {
-        String apiUrl = "http://localhost:8080/api/getQuote";
+        String apiUrl = "http://localhost:8080/getQuote";
         return restTemplate.getForObject(apiUrl, String.class);
     }
 }

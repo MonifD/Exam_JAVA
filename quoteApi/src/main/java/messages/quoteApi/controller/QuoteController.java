@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import messages.quoteApi.service.QuoteService;
 
 @RestController
-@RequestMapping("/api")
 public class QuoteController {
 
     @Autowired
