@@ -82,7 +82,7 @@ Ce projet est composé de deux applications Spring Boot :
 ## **Routes disponibles**
 
 ### **quoteApi**
-- **GET `http://localhost:8080/api/getQuote`** :
+- **GET `http://localhost:8080/getQuote`** :
   - Retourne une citation inspirante aléatoire.
   - Exemple de réponse :
     ```json
